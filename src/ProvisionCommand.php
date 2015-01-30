@@ -15,7 +15,7 @@ class ProvisionCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('provision')
-			->setDescription('Re-provisions the Homestead machine');
+			->setDescription('Re-provisions the Workstead machine');
 	}
 
 	/**

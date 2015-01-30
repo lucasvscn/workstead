@@ -15,7 +15,7 @@ class DestroyCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('destroy')
-                  ->setDescription('Destroy the Homestead machine');
+                  ->setDescription('Destroy the Workstead machine');
 	}
 
 	/**

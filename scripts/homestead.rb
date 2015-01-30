@@ -5,16 +5,16 @@ class Homestead
     config.vm.hostname = "workstead"
 
     # Configure A Private Network IP
-    config.vm.network :private_network, ip: settings["ip"] ||= "192.168.10.10"
+    config.vm.network :private_network, ip: settings["ip"] ||= "192.168.33.10"
 
     # Configure A Few VirtualBox Settings
     config.vm.provider "virtualbox" do |vb|
-      vb.name = 'homestead'
+      vb.name = 'workstead'
       vb.customize ["modifyvm", :id, "--memory", settings["memory"] ||= "2048"]
       vb.customize ["modifyvm", :id, "--cpus", settings["cpus"] ||= "1"]
       vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
       vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-      vb.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
+      # vb.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
     end
 
     # Configure Port Forwarding To The Box
@@ -53,11 +53,6 @@ class Homestead
       s.args = [File.read(File.expand_path(settings["config"]))]
     end
 
-    # Copy The Bash Aliases
-    config.vm.provision "shell" do |s|
-      s.inline = "cp /vagrant/aliases /home/vagrant/.aliases"
-    end
-
     # Register All Of The Configured Shared Folders
     settings["folders"].each do |folder|
       config.vm.synced_folder folder["map"], folder["to"], type: folder["type"] ||= nil, :mount_options => folder["options"] ||= nil
@@ -82,11 +77,6 @@ class Homestead
             s.path = "./scripts/create-mysql.sh"
             s.args = [db]
         end
-
-        config.vm.provision "shell" do |s|
-            s.path = "./scripts/create-postgres.sh"
-            s.args = [db]
-        end
     end
 
     # Configure All Of The Server Environment Variables
@@ -94,7 +84,7 @@ class Homestead
       settings["variables"].each do |var|
 
         config.vm.provision "shell" do |s|
-            s.inline = "echo \"\n#Set Homestead environment variable\nexport $1=$2\" >> /home/vagrant/.profile"
+            s.inline = "echo \"\n#Set Workstead environment variable\nexport $1=$2\" >> /home/vagrant/.profile"
             s.args = [var["key"], var["value"]]
         end
       end

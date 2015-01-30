@@ -1,6 +1,6 @@
 ---
-ip: "192.168.10.10"
-memory: 1920
+ip: "192.168.33.10"
+memory: 2048
 cpus: 1
 
 config: ~/.ssh/config
@@ -21,7 +21,7 @@ sites:
       phperr: E_ALL
 
 databases:
-    - homestead
+    - workstead
 
 variables:
     - key: APP_ENV

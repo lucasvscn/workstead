@@ -17,7 +17,7 @@ class RunCommand extends Command {
 	{
 		$this
 			->setName('run')
-			->setDescription('Run commands through the Homestead machine via SSH')
+			->setDescription('Run commands through the Workstead machine via SSH')
 			->addArgument('ssh-command', InputArgument::REQUIRED, 'The command to pass through to the virtual machine.');
 }
 
@@ -50,5 +50,5 @@ class RunCommand extends Command {
 	{
 		return strpos(strtoupper(PHP_OS), 'WIN') === 0;
 	}
-	
+
 }

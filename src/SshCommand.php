@@ -15,7 +15,7 @@ class SshCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('ssh')
-                  ->setDescription('Login to the Homestead machine via SSH');
+                  ->setDescription('Login to the Workstead machine via SSH');
 	}
 
 	/**

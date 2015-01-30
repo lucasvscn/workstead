@@ -16,7 +16,7 @@ class UpCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('up')
-                  ->setDescription('Start the Homestead machine')
+                  ->setDescription('Start the Workstead machine')
 				  ->addOption('provision', null, InputOption::VALUE_NONE, 'Run the provisioners on the box.');
 	}
 

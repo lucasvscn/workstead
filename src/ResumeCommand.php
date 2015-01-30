@@ -15,7 +15,7 @@ class ResumeCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('resume')
-                  ->setDescription('Resume the suspended Homestead machine');
+                  ->setDescription('Resume the suspended Workstead machine');
 	}
 
 	/**

@@ -15,7 +15,7 @@ class HaltCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('halt')
-                  ->setDescription('Halt the Homestead machine');
+                  ->setDescription('Halt the Workstead machine');
 	}
 
 	/**

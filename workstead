@@ -17,15 +17,15 @@ function homestead_path()
 {
 	if (isset($_SERVER['HOME']))
 	{
-		return $_SERVER['HOME'].'/.homestead';
+		return $_SERVER['HOME'].'/.workstead';
 	}
 	else
 	{
-		return $_SERVER['HOMEDRIVE'].$_SERVER['HOMEPATH'].DIRECTORY_SEPARATOR.'.homestead';
+		return $_SERVER['HOMEDRIVE'].$_SERVER['HOMEPATH'].DIRECTORY_SEPARATOR.'.workstead';
 	}
 }
 
-$app = new Symfony\Component\Console\Application('Laravel Homestead', '2.0.9');
+$app = new Symfony\Component\Console\Application('Workstead', '2.0.0');
 
 $app->add(new Laravel\Homestead\DestroyCommand);
 $app->add(new Laravel\Homestead\EditCommand);

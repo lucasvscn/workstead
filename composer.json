@@ -1,6 +1,6 @@
 {
-    "name": "laravel/homestead",
-    "description": "A virtual machine for web artisans.",
+    "name": "vscn/workstead",
+    "description": "Modified Homestead to run with CentOS and Apache.",
     "require": {
         "php": ">=5.4",
         "symfony/console": "~2.0",
@@ -11,6 +11,10 @@
         {
             "name": "Taylor Otwell",
             "email": "taylorotwell@gmail.com"
+        },
+        {
+            "name": "Lucas Vasconcelos",
+            "email": "lucasvscn@gmail.com"
         }
     ],
     "autoload": {
@@ -19,7 +23,7 @@
         }
     },
     "bin": [
-        "homestead"
+        "workstead"
     ],
     "minimum-stability": "stable"
 }

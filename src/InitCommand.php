@@ -15,7 +15,7 @@ class InitCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('init')
-                  ->setDescription('Create a stub Homestead.yaml file');
+                  ->setDescription('Create a stub Workstead.yaml file');
 	}
 
 	/**
@@ -29,7 +29,7 @@ class InitCommand extends Command {
 	{
 		if (is_dir(homestead_path()))
 		{
-			throw new \InvalidArgumentException("Homestead has already been initialized.");
+			throw new \InvalidArgumentException("Workstead has already been initialized.");
 		}
 
 		mkdir(homestead_path());

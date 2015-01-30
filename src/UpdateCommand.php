@@ -15,7 +15,7 @@ class UpdateCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('update')
-                  ->setDescription('Update the Homestead machine image');
+                  ->setDescription('Update the Workstead machine image');
 	}
 
 	/**

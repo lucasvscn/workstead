@@ -15,7 +15,7 @@ class SuspendCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('suspend')
-                  ->setDescription('Suspend the Homestead machine');
+                  ->setDescription('Suspend the Workstead machine');
 	}
 
 	/**

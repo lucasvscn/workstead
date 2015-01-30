@@ -1,7 +1,9 @@
 Workstead
 =========
 
-This is a modified version of [Laravel Homestead](http://laravel.com/docs/homestead?version=4.2).
+**Caution!** This is a modified version of [Laravel Homestead](http://laravel.com/docs/homestead?version=4.2).
+
+I made some changes to fit my own needs.
 
 Features included
 =================

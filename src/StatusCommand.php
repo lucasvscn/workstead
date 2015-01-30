@@ -15,7 +15,7 @@ class StatusCommand extends Command {
 	protected function configure()
 	{
 		$this->setName('status')
-                  ->setDescription('Get the status of the Homestead machine');
+                  ->setDescription('Get the status of the Workstead machine');
 	}
 
 	/**
