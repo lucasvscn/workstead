@@ -27,7 +27,7 @@ class EditCommand extends Command {
 	 */
 	public function execute(InputInterface $input, OutputInterface $output)
 	{
-		$command = $this->executable().' '.homestead_path().'/Workstead.yaml';
+		$command = $this->executable().' '.homestead_path().'/Homestead.yaml';
 
 		$process = new Process($command, realpath(__DIR__.'/../'), array_merge($_SERVER, $_ENV), null, null);
 
