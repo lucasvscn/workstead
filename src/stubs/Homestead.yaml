@@ -20,3 +20,9 @@ sites:
       to: /home/vagrant/Code
       phperr: E_ALL
 
+databases:
+    - homestead
+
+variables:
+    - key: APP_ENV
+      value: local
