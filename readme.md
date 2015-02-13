@@ -19,7 +19,17 @@ The Homestead.yaml file will be placed in your ~/.workstead directory.
 
 ### With Composer + PHP Tool
 
-    composer global require "laravel/homestead=~2.0"
+    composer global require "vscn/workstead=dev-master"
+
+Make sure to place the `~/.composer/vendor/bin` directory in your PATH so the `workstead` executable is found when you run the `workstead` command in your terminal.
+
+Once you have installed the Workstead CLI tool, run the `init` command to create the Homestead.yaml configuration file:
+
+    workstead init
+
+The Homestead.yaml file will be placed in the ~/.workstead directory. If you're using a Mac or Linux system, you may edit Homestead.yaml file by running the workstead edit command in your terminal:
+
+    workstead edit
 
 
 ## Features included
