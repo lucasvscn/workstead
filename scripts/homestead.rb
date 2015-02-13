@@ -83,7 +83,7 @@ class Homestead
       settings["variables"].each do |var|
 
         config.vm.provision "shell" do |s|
-            s.inline = "echo \"\n#Set Workstead environment variable\nexport $1=$2\" >> /home/vagrant/.profile"
+            s.inline = "echo \"\n#Set Workstead environment variable\nexport $1=$2\" >> /home/vagrant/.bash_profile"
             s.args = [var["key"], var["value"]]
         end
       end
